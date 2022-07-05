@@ -1,7 +1,7 @@
 import React from "react";
 import UtenteService from "../services/UtenteService";
 
-class UtenteComponent extends React.Component {
+class ListaUtentiComponent extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -47,4 +47,4 @@ class UtenteComponent extends React.Component {
   }
 }
 
-export default UtenteComponent;
+export default ListaUtentiComponent;
