@@ -7,8 +7,13 @@ class ListaUtentiComponent extends Component {
     this.state = {
       utenti: [],
     };
+    this.aggiungiUtente = this.aggiungiUtente.bind(this);
   }
 
+  aggiungiUtente(){
+    this.props.history.push('aggiungi-utente');
+  }
+  
   componentDidMount() {
     UtenteService.getUtenti().then((res) => {
       this.setState({ utenti: res.data });
@@ -19,6 +24,9 @@ class ListaUtentiComponent extends Component {
     return (
       <div>
         <h1 className="text-center">Lista Utenti</h1>
+        <div className="row">
+          <button className="btn btn-primary" onClick={this.aggiungiUtente}>Aggiungi Utente</button>
+        </div>
         <div className="row">
           <table className="table table-striped">
             <thead>
